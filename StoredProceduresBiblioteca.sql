@@ -1,6 +1,6 @@
 USE [Biblioteca]
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarUsuario]    Script Date: 07/11/2022 2:32:02 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8,16 +8,16 @@ GO
 ALTER proc [dbo].[InsertarUsuario](
 @NombreUsuario varchar(20),
 @Cuenta varchar(20),
-@Contraseña varchar(20)
+@Contraseï¿½a varchar(20)
 )
 as
 begin
-insert into Usuarios (NombreUsuario,Cuenta,Contraseña)
-values (@NombreUsuario,@Cuenta,@Contraseña)
+insert into Usuarios (NombreUsuario,Cuenta,Contraseï¿½a)
+values (@NombreUsuario,@Cuenta,@Contraseï¿½a)
 end
 
 
-/****** Object:  StoredProcedure [dbo].[InsertarLibro]    Script Date: 07/11/2022 2:32:33 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -44,7 +44,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[NuevoLector]    Script Date: 07/11/2022 2:33:04 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -64,7 +64,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[GuardarPrestamo]    Script Date: 07/11/2022 2:34:02 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -84,7 +84,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[ModificarLector]    Script Date: 07/11/2022 2:34:33 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -110,7 +110,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[ModificarLibro]    Script Date: 07/11/2022 2:34:44 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -147,7 +147,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[ActualizarUsuario]    Script Date: 07/11/2022 2:35:01 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -156,7 +156,7 @@ ALTER proc [dbo].[ActualizarUsuario](
 @IdUsuario int,
 @NombreUsuario varchar(20),
 @Cuenta varchar(20),
-@Contraseña varchar(20)
+@Contraseï¿½a varchar(20)
 )
 as
 begin
@@ -164,14 +164,14 @@ update Usuarios
 set
 NombreUsuario = @NombreUsuario,
 Cuenta = @Cuenta,
-Contraseña = @Contraseña
+Contraseï¿½a = @Contraseï¿½a
 where IdUsuario = @IdUsuario
 end
 
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarLibro]    Script Date: 07/11/2022 2:35:26 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -187,7 +187,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarPrestamo]    Script Date: 07/11/2022 2:35:38 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -203,7 +203,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarUsuario]    Script Date: 07/11/2022 2:35:49 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -219,7 +219,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[DevolverLibro]    Script Date: 07/11/2022 2:36:16 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -240,7 +240,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarLector]    Script Date: 07/11/2022 2:37:43 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -256,7 +256,7 @@ end
 
 E [Biblioteca]
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarLibro]    Script Date: 07/11/2022 2:37:53 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -270,7 +270,7 @@ end
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarPrestamo]    Script Date: 07/11/2022 2:38:03 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -284,7 +284,7 @@ delete from Prestamo where IdPrestamo = @IdPrestamo1
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarUsuario]    Script Date: 07/11/2022 2:38:14 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
